@@ -1,0 +1,144 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWU First-Year Survival Hub | Wellbeing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🎓 NWU Survival Hub</h1>
+                <p>First-Year Student Support</p>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="wellbeing.html" class="active">Wellbeing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>❤️ Your Wellbeing Matters</h1>
+            <p>Mental, physical, and emotional support for NWU students</p>
+        </section>
+
+        <!-- Quick Check-in Section -->
+        <section class="checkin-section">
+            <h2>🤗 Quick Check-In</h2>
+            <p>How are you feeling today?</p>
+            <div class="emoji-tabs">
+                <button class="emoji-btn" onclick="showWellbeingTab('health')">
+                    <span class="emoji">😊</span>
+                    <span>Good</span>
+                </button>
+                <button class="emoji-btn" onclick="showWellbeingTab('safety')">
+                    <span class="emoji">😐</span>
+                    <span>Okay</span>
+                </button>
+                <button class="emoji-btn" onclick="showWellbeingTab('daily')">
+                    <span class="emoji">😔</span>
+                    <span>Struggling</span>
+                </button>
+            </div>
+            <div id="checkinMessage" class="checkin-message"></div>
+        </section>
+
+        <!-- Wellbeing Tabs -->
+        <section class="wellbeing-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('health')">🏥 Health & Counselling</button>
+                <button class="tab-btn" onclick="switchTab('safety')">🛡️ Campus Safety</button>
+                <button class="tab-btn" onclick="switchTab('daily')">⚡ Loadshedding & Daily Life</button>
+            </div>
+
+            <div id="healthTab" class="tab-content active">
+                <div class="info-card">
+                    <h3>🏥 Campus Health Clinic</h3>
+                    <p><strong>Location:</strong> Next to Student Centre</p>
+                    <p><strong>Hours:</strong> Monday-Friday 8am-4pm</p>
+                    <p><strong>Services:</strong> General check-ups, contraceptives, HIV testing, flu shots</p>
+                    <p><strong>Contact:</strong> (018) 299 4444</p>
+                </div>
+                <div class="info-card">
+                    <h3>🧠 Counselling Services</h3>
+                    <p><strong>Free confidential counselling for all students</strong></p>
+                    <p><strong>Location:</strong> Student Support Building, Room 101</p>
+                    <p><strong>Hours:</strong> Monday-Friday 9am-4pm</p>
+                    <p><strong>Contact:</strong> (018) 299 4555</p>
+                    <p><strong>Emergency After Hours:</strong> 0800 123 456</p>
+                    <button class="contact-btn" onclick="showContactAlert('counselling')">Book Appointment →</button>
+                </div>
+            </div>
+
+            <div id="safetyTab" class="tab-content">
+                <div class="info-card">
+                    <h3>🚔 Campus Security</h3>
+                    <p><strong>Emergency Number:</strong> (018) 299 1111</p>
+                    <p><strong>Blue Emergency Phones:</strong> Located throughout campus</p>
+                    <p><strong>Security Office:</strong> Gate 2, 24/7</p>
+                </div>
+                <div class="info-card">
+                    <h3>🚶 Safety Tips</h3>
+                    <ul>
+                        <li>Always walk in well-lit areas at night</li>
+                        <li>Save security numbers in your phone</li>
+                        <li>Use Campus Protection Services escort after dark</li>
+                        <li>Report suspicious activity immediately</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="dailyTab" class="tab-content">
+                <div class="info-card">
+                    <h3>⚡ Loadshedding Survival Guide</h3>
+                    <ul>
+                        <li>💻 Keep laptops and power banks charged</li>
+                        <li>📱 Download eFundi materials for offline access</li>
+                        <li>☕ Study spots with backup power: Library, Student Centre</li>
+                        <li>🔦 Keep a flashlight and extra batteries</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h3>📚 Study Spots with Backup Power</h3>
+                    <ul>
+                        <li>Main Library - Full generator backup</li>
+                        <li>Student Centre Study Area</li>
+                        <li>Engineering Building Computer Lab</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-section">
+            <h2>📞 Emergency Contacts</h2>
+            <div class="emergency-grid">
+                <div class="emergency-card"><h3>🚓 Campus Security</h3><p>(018) 299 1111</p></div>
+                <div class="emergency-card"><h3>🚑 Campus Clinic</h3><p>(018) 299 4444</p></div>
+                <div class="emergency-card"><h3>🧠 Crisis Helpline</h3><p>0800 123 456 (24/7)</p></div>
+                <div class="emergency-card"><h3>💻 IT Helpdesk</h3><p>(018) 299 1234</p></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 NWU First-Year Survival Hub</p>
+            <p>Designed for COMS313 Group Assignment | North-West University</p>
+            <p>📍 Potchefstroom | Mahikeng | Vanderbijlpark</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWU First-Year Survival Hub | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🎓 NWU Survival Hub</h1>
+                <p>First-Year Student Support</p>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="wellbeing.html">Wellbeing</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>📞 Get Help & Support</h1>
+            <p>We're here to help you succeed. Reach out anytime!</p>
+        </section>
+
+      <section class="emergency-section">
+    <h2><span class="icon">📞</span> Emergency Contacts</h2>
+    
+    <div class="contact-grid">
+        <div class="contact-card">
+            <p class="card-title">🚓 Campus Security</p>
+            <p class="card-phone">(018) 299 1111</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="card-title">🚑 Campus Clinic</p>
+            <p class="card-phone">(018) 299 4444</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="card-title">🧠 Crisis Helpline</p>
+            <p class="card-phone">0800 123 456 (24/7)</p>
+        </div>
+
+        <div class="contact-card">
+            <p class="card-title">💻 IT Helpdesk</p>
+            <p class="card-phone">(018) 299 1234</p>
+        </div>
+    </div>
+</section>
+
+            <section class="email-section">
+    <h2><span class="icon">📧</span> Important Emails</h2>
+    
+    <div class="email-grid">
+        <div class="email-card">
+            <h3>Student Support</h3>
+            <a href="mailto:studentsupport@nwu.ac.za" class="email-link">
+                📩 studentsupport@nwu.ac.za
+            </a>
+        </div>
+
+        <div class="email-card">
+            <h3>IT Helpdesk</h3>
+            <a href="mailto:ithelpdesk@nwu.ac.za" class="email-link">
+                📩 ithelpdesk@nwu.ac.za
+            </a>
+        </div>
+
+        <div class="email-card">
+            <h3>Financial Aid</h3>
+            <a href="mailto:financialaid@nwu.ac.za" class="email-link">
+                📩 financialaid@nwu.ac.za
+            </a>
+        </div>
+
+        <div class="email-card">
+            <h3>Counselling Services</h3>
+            <a href="mailto:counselling@nwu.ac.za" class="email-link">
+                📩 counselling@nwu.ac.za
+            </a>
+        </div>
+    </div>
+</section>
+
+        <!-- Contact Form -->
+        <section class="form-section">
+            <h2>✉️ Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentNum">Student Number *</label>
+                        <input type="text" id="studentNum" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Student Email *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campus">Campus *</label>
+                        <select id="campus">
+                            <option value="">Select Campus</option>
+                            <option value="Potchefstroom">Potchefstroom</option>
+                            <option value="Mahikeng">Mahikeng</option>
+                            <option value="Vanderbijlpark">Vanderbijlpark</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message ✉️</button>
+                <div id="formFeedback" class="form-feedback"></div>
+            </form>
+        </section>
+
+        <!-- Quick Help Section -->
+        <section class="quick-help">
+            <h2>⚡ Quick Help</h2>
+            <div class="help-grid">
+                <div class="help-card" onclick="showHelp('efundi')">
+                    <span>📖</span>
+                    <h3>eFundi Issues?</h3>
+                    <p>Click for help</p>
+                </div>
+                <div class="help-card" onclick="showHelp('password')">
+                    <span>🔑</span>
+                    <h3>Password Reset?</h3>
+                    <p>Click for help</p>
+                </div>
+                <div class="help-card" onclick="showHelp('registration')">
+                    <span>📋</span>
+                    <h3>Registration Help?</h3>
+                    <p>Click for help</p>
+                </div>
+                <div class="help-card" onclick="showHelp('wellbeing')">
+                    <span>❤️</span>
+                    <h3>Wellbeing Support?</h3>
+                    <p>Click for help</p>
+                </div>
+            </div>
+            <div id="helpMessage" class="help-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 NWU First-Year Survival Hub</p>
+            <p>Designed for COMS313 Group Assignment | North-West University</p>
+            <p>📍 Potchefstroom | Mahikeng | Vanderbijlpark</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

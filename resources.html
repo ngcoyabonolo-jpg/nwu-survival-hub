@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWU First-Year Survival Hub | Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>🎓 NWU Survival Hub</h1>
+                <p>First-Year Student Support</p>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="wellbeing.html">Wellbeing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>📚 Student Resources</h1>
+            <p>Find everything you need to navigate university life successfully</p>
+        </section>
+
+        <!-- Filter Tabs Section -->
+        <section class="filter-section">
+            <h3>Filter by Category:</h3>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all" onclick="filterResources('all')">All</button>
+                <button class="filter-btn" data-filter="academic" onclick="filterResources('academic')">📖 Academic</button>
+                <button class="filter-btn" data-filter="admin" onclick="filterResources('admin')">📋 Admin</button>
+                <button class="filter-btn" data-filter="finance" onclick="filterResources('finance')">💰 Finance</button>
+                <button class="filter-btn" data-filter="tech" onclick="filterResources('tech')">💻 Tech & IT</button>
+            </div>
+        </section>
+
+        <!-- Resources Grid -->
+        <section class="resources-grid" id="resourcesGrid">
+            <div class="resource-card" data-category="academic">
+                <h3>📖 eFundi Guide</h3>
+                <p>Complete guide to navigating NWU's learning management system</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>How to access:</strong> Visit efundi.nwu.ac.za</p>
+                    <p><strong>Login:</strong> Student number + network password</p>
+                    <p><strong>Features:</strong> Course materials, assignments, grades, announcements</p>
+                    <p><strong>Support:</strong> IT Helpdesk (018) 299 1234</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="academic">
+                <h3>📋 mySIS Portal Guide</h3>
+                <p>Manage your academic records and registration</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Use mySIS for:</strong> Course registration, exam results, fee statements, personal info updates</p>
+                    <p><strong>Access:</strong> my sis.nwu.ac.za</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="admin">
+                <h3>📋 Student ID Card</h3>
+                <p>How to get your official NWU student ID card</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Where:</strong> Campus Administration Office</p>
+                    <p><strong>Required:</strong> Proof of registration + Valid ID</p>
+                    <p><strong>Cost:</strong> First card free, replacements R100</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="admin">
+                <h3>🏠 Residence Information</h3>
+                <p>Everything about campus accommodation</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Applications:</strong> Through mySIS Portal</p>
+                    <p><strong>Contact:</strong> Residence Office at (018) 299 2222</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="finance">
+                <h3>💰 NSFAS Funding</h3>
+                <p>Information about NSFAS applications and requirements</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Application period:</strong> September - January</p>
+                    <p><strong>Requirements:</strong> South African citizen, household income under R350,000</p>
+                    <p><strong>Contact:</strong> Financial Aid Office at (018) 299 3333</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="finance">
+                <h3>💳 Student Fees & Payments</h3>
+                <p>Understanding tuition fees and payment methods</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Payment deadline:</strong> First day of classes</p>
+                    <p><strong>Payment methods:</strong> Online, bank deposit, cash at campus</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="tech">
+                <h3>💻 NWU WiFi Setup</h3>
+                <p>Connect to campus WiFi on any device</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Network:</strong> NWU-Student</p>
+                    <p><strong>Login:</strong> Student number + network password</p>
+                    <p><strong>Coverage:</strong> All academic buildings, libraries, residences</p>
+                </div>
+            </div>
+
+            <div class="resource-card" data-category="tech">
+                <h3>🖥️ Computer Labs & Printing</h3>
+                <p>Locations and access to computer facilities</p>
+                <button class="details-btn" onclick="toggleDetails(this)">View Details ▼</button>
+                <div class="details-content">
+                    <p><strong>Locations:</strong> Library, Education Building, Science Block</p>
+                    <p><strong>Printing:</strong> R1 per page (b/w), R3 (colour)</p>
+                    <p><strong>Hours:</strong> 7am - 10pm weekdays</p>
+                </div>
+            </div>
+        </section>
+    </main>
+        
